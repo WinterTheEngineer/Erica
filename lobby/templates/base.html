@@ -6,10 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <link rel="stylesheet" href="{% static 'base.css' %}">
-    <title>Erica</title>
+    <link rel="stylesheet" href="{% static 'fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'animations.css' %}">
+    {% block styles %}{% endblock styles %}
+
+    <title>Erica - {{page_title}}</title>
 </head>
 <body>
-    
+    {% include 'splash.html' %}
 </body>
 </html>

@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def lobby(request):
 
     context = {
-
+        'page_title': "Lobby"
     }
 
     return render(request, 'base.html', context)
