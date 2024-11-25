@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="navbar">
+    <div class="menubar">
+        <a href="" class="nav-logo">
+            <img src="https://imgur.com/qN5PwtK.png" alt="Erica logo, depicting a pair of spectacles, and text that spells 'ERICA' in all caps.">
+        </a>
+    </div>
+    <nav>
+        <button class="nav-button prev">
+            <ion-icon name="caret-back"></ion-icon>
+        </button>
+        <ul>
+            <li>
+                <a href="#">Tasks</a>
+            </li>
+            <li>
+                <a href="#">Reminders</a>
+            </li>
+            <li>
+                <a href="{% url 'lobby' %}">Home</a>
+            </li>
+            <li>
+                <a href="#">Recipes</a>
+            </li>
+            <li>
+                <a href="#">Lists</a>
+            </li>
+        </ul>
+        <button class="nav-button next">
+            <ion-icon name="caret-forward"></ion-icon>
+        </button>
+    </nav>
+</div>
