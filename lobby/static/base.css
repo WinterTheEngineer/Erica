@@ -22,24 +22,28 @@ body {
     transition: opacity .4s ease, visibility .4s ease;
 }
 
-.splash-logo {
+#splash .logo {
     height: 10rem;
     transform: translateY(-3rem);
 }
 
-#splash-loader {
+#splash #loader {
     width: 16rem;
-    transform: translateY(3rem);
+    transform: translateY(2rem);
     text-align: center;
 }
 
-#splash-loader text.text-body {
+#splash #loader text.text-body {
     font-size: 5rem;
     stroke-width: 2;
-    font-weight: 700;
+    font-weight: 900;
     stroke: #000000;
     font-family: 'Gotham';
     animation: 6s infinite alternate logo-stroke;
+}
+
+#splash .tagline {
+    font-weight: 700;
 }
 
 #splash.invisible {
