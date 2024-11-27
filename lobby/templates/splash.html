@@ -5,14 +5,14 @@
         <img src="https://imgur.com/1zvy9gA.png" alt="Erica logo, depicting a pair of spectacles" class="splash-logo-img animate__animated animate__animated animate__fadeIn">
     </div>
     <svg id="loader" viewBox="0 0 400 160">
-        <text x="50%" y="50%" text-anchor="middle" class="text-body">ERICA</text>
+        <text x="50%" y="50%" text-anchor="middle" class="text-body">{{sector}}</text>
     </svg>
     <!-- <p class="tagline">Efficiency. Productivity. Convenience</p> -->
 </div>
 
 <script>
     //Script for timed splash
-    const page_title = "{{ page_title }}";
+    const page_title = "{{ sector }}";
 
     document.addEventListener('DOMContentLoaded', () => {
         if (page_title == ("Lobby")) {
