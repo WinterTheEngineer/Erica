@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def lists(request):
 
     context = {
         'sector': "Lists"
     }
 
-    return render(request, 'base.html', context)
+    return render(request, 'lists.html', context)

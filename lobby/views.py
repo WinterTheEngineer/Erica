@@ -4,7 +4,7 @@ from django.shortcuts import render
 def lobby(request):
 
     context = {
-        'sector': "Lobby"
+        'sector': "Erica"
     }
 
     return render(request, 'base.html', context)

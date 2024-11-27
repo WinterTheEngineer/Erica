@@ -15,12 +15,8 @@
     const page_title = "{{ sector }}";
 
     document.addEventListener('DOMContentLoaded', () => {
-        if (page_title == ("Lobby")) {
-            setTimeout(function() {
-                splash.classList.toggle('invisible');
-            }, 6000);
-        } else {
+        setTimeout(function() {
             splash.classList.toggle('invisible');
-        };
+        }, 6000);
     });
 </script>

@@ -1,0 +1,29 @@
+.content-grid {
+    padding: 1rem;
+    columns: 18rem auto;
+    /* grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); */
+}
+
+.list {
+    padding: 1rem;
+    border-radius: 6px;
+    height: min-content;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    /* border: 1px solid #00000030; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-header {
+    margin-bottom: 1rem;
+    padding-inline-start: .5rem;
+    border-left: .4rem solid #B42EF2;
+}
+
+.card-header h2 {
+    margin-bottom: .5rem;
+}
+
+.card-header p {
+    font-weight: 600;
+}
