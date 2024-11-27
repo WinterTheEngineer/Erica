@@ -38,6 +38,7 @@ body {
     stroke-width: 2;
     font-weight: 900;
     stroke: #000000;
+    text-transform: uppercase;
     font-family: 'Gotham';
     animation: 6s infinite alternate logo-stroke;
 }
