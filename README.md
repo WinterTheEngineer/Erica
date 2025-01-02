@@ -1,10 +1,6 @@
-
+![My headshot](static/images/logos/github_banner.png)
 <h1 align="center">
-  <br>
-  <a href="#"></a>
-  <br>
   Erica
-  <br>
 </h1>
 
 <h4 align="center">A lifestyle management tool to maximize productivity and provide convenience<h4>
