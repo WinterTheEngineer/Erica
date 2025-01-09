@@ -10,8 +10,13 @@
     height: min-content;
     break-inside: avoid;
     margin-bottom: 1rem;
-    /* border: 1px solid #00000030; */
+    animation-delay: 6.5s;
+    transition: .3s box-shadow ease;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.list:hover {
+    box-shadow: #E2A8FE 0px 5px 15px;
 }
 
 .card-header {
