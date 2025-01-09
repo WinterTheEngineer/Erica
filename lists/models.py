@@ -12,7 +12,7 @@ class ListItem(models.Model):
 class List(models.Model):
 
     title = models.CharField(max_length=120)
-    description = models.CharField(max_length=255)
+    description = models.CharField(max_length=255, blank=True)
     listItems = models.ManyToManyField(ListItem, blank=True)
     
     ordered = models.BooleanField(default=False)
