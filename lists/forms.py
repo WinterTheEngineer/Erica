@@ -23,4 +23,4 @@ class ListForm(forms.Form):
     title = forms.CharField(required=True)
     description = forms.CharField(required=False)
     listItems = forms.CharField(widget=Textarea, required=False)
-    ordered = forms.BooleanField(widget=CheckboxInput)
+    ordered = forms.BooleanField(required=False, widget=CheckboxInput)
