@@ -1,5 +1,6 @@
 from .forms import ListForm
 from .models import List, ListItem
+from django.contrib import messages
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -34,11 +35,11 @@ def new_list(request):
                 new_list_item.save()
                 new_list.listItems.add(new_list_item)
             
-            # Finally, save the list
             
         else:
-            print(form.errors)
+            messages.error(request, "A form validation error prevented me from created the list.")
     else:
         form = ListForm()
     
+    messages.success(request, "The list was created successfully.")
     return redirect('lists')

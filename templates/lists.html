@@ -45,6 +45,10 @@
     </div>
 </section>
 <section id="list-creation-modal">
+    <div class="header">
+        <img src="https://imgur.com/1zvy9gA.png" alt="Erica logo, depicting a pair of spectacles, and text that spells 'ERICA' in all caps.">
+        <h2>Create a new list</h2>
+    </div>
     <form action="{% url 'new_list' %}" method="post">
         {% csrf_token %}
         <div>

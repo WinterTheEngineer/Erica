@@ -149,3 +149,30 @@ nav ul li a:hover {
     color: #B42EF2;
     animation-delay: 6.5s;
 }
+
+.messages {
+    z-index: 99;
+    right: 3rem;
+    bottom: 3rem;
+    padding: 1rem;
+    position: fixed;
+    max-width: 22rem;
+    list-style: none;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #00000010;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.messages ion-icon {
+    font-size: 2rem;
+    fill: #B42EF2;
+    margin-bottom: 1rem;
+}
+
+.messages li {
+    color: #000000;
+    /* font-size: 1.2rem; */
+    text-align: center;
+}

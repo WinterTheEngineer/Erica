@@ -72,10 +72,29 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
     position: fixed;
-    place-items: center;
+    align-items: center;
     background: #ffffff;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#list-creation-modal .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#list-creation-modal h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#list-creation-modal img {
+    width: 50%;
 }
 
 #list-creation-modal form {
@@ -84,6 +103,7 @@
     width: min-content;
     background-color: #ffffff;
     border: 1px solid #00000010;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 #list-creation-modal form div {
