@@ -32,9 +32,14 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="card new-list-card list animate__animated animate__fadeInUp">
+            <button onclick="minimizeModal()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </button>
+        </div>
     </div>
 </section>
-<section id="list-creation-modal">
+<section id="list-creation-modal" class="minimized">
     <div class="header">
         <img src="https://imgur.com/1zvy9gA.png" alt="Erica logo, depicting a pair of spectacles, and text that spells 'ERICA' in all caps.">
         <h2>Create a new list</h2>
@@ -63,7 +68,9 @@
         </div> -->
         
         <button type="submit" class="submit">Create List</button>
-        <button type="submit" class="cancel">Cancel</button>
+        <button class="cancel" onclick="minimizeModal()">Cancel</button>
     </form>
 </section>
+
+<script src="{% static 'js/lists.js' %}"></script>
 {% endblock body %}
