@@ -12,7 +12,7 @@
     margin-bottom: 1rem;
     animation-delay: 6.5s;
     transition: .3s box-shadow ease;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .list:hover {
@@ -104,7 +104,8 @@
     background: #ffffff;
     justify-content: center;
     flex-direction: column;
-    transition: opacity .5s ease;
+    transition: opacity .5s ease,
+                visibility .5s ease;
 }
 
 #list-creation-modal.minimized {
