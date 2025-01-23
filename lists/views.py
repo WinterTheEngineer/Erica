@@ -6,7 +6,10 @@ from django.shortcuts import render, redirect
 # Create your views here.
 def lists(request):
 
+    lists = List.objects.all
+
     context = {
+        'lists': lists,
         'sector': "Lists",
         'listform': ListForm
     }

@@ -14,34 +14,24 @@
 </section>
 <section id="lists">
     <div class="container content-grid">
-        <div class="card list animate__animated animate__fadeInUp">
-            <div class="card-header">
-                <h2>Groceries</h2>
-                <p>Essential day-to-day Items to be fit into the monthly budget.</p>
-            </div>
-            <div class="card-body">
-                <div class="listitem">
-                    <p>1</p>
-                    <p>Milk</p>
+        {% for list in lists %}
+            <div class="card list animate__animated animate__fadeInUp">
+                <div class="card-header">
+                    <h2>{{list.title}}</h2>
+                    {% if list.description %}
+                        <p>{{list.description}}</p>
+                    {% endif %}
                 </div>
-                <div class="listitem">
-                    <p>2</p>
-                    <p>Bread</p>
-                </div>
-                <div class="listitem">
-                    <p>3</p>
-                    <p>Eggs</p>
-                </div>
-                <div class="listitem">
-                    <p>4</p>
-                    <p>Cheese</p>
-                </div>
-                <div class="listitem">
-                    <p>5</p>
-                    <p>Apples</p>
+                <div class="card-body">
+                    {% for listitem in list.listItems.all %}
+                        <div class="listitem">
+                            <p>1</p>
+                            <p>{{listitem}}</p>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <section id="list-creation-modal">
