@@ -26,10 +26,15 @@
 }
 
 .card-header h2 {
-    margin-bottom: .5rem;
+    margin: 0;
+    font-weight: 600;   
 }
 
-.card-header p,
+.card-header p {
+    opacity: .4;
+    margin: .5rem 0;
+}
+
 .listitem {
     font-weight: 600;
 }
