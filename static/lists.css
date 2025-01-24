@@ -115,6 +115,7 @@
 
 #list-creation-modal .header {
     display: flex;
+    position: relative;
     align-items: center;
     margin-bottom: 2rem;
     flex-direction: column;

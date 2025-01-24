@@ -93,6 +93,10 @@ nav ul {
     width: calc(100% - 4rem);
 }
 
+.container-slim {
+    margin: 0 30rem;
+}
+
 nav ul li {
     width: 20%;
 }
@@ -175,4 +179,23 @@ nav ul li a:hover {
     color: #000000;
     /* font-size: 1.2rem; */
     text-align: center;
+}
+
+.close-modal {
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+}
+
+.close-modal ion-icon {
+    color: #000000;
+    font-size: 1.6rem;
+    transition: color .5s ease;
+}
+
+.close-modal:hover ion-icon {
+    color: #B42EF2;
 }
