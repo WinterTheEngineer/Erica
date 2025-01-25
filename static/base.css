@@ -27,13 +27,15 @@ body {
 }
 
 #splash .logo {
-    height: 10rem;
-    transform: translateY(-3rem);
+    height: 16rem;
+}
+
+#splash .logo img {
+    height: 100%;
 }
 
 #splash #loader {
     width: 16rem;
-    transform: translateY(2rem);
     text-align: center;
 }
 
