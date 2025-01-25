@@ -59,25 +59,7 @@ body {
 }
 
 nav {
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #00000020;
-}
-
-.container-slim {
-    margin: 0 30rem;
-}
-
-.nav-logo {
-    height: 100%;
-}
-
-.nav-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: none;
 }
 
 #header {
