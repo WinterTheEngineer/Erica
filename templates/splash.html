@@ -5,7 +5,14 @@
         <img src="https://imgur.com/1zvy9gA.png" alt="Erica logo, depicting a pair of spectacles" class="splash-logo-img animate__animated animate__animated animate__fadeIn">
     </div>
     <svg id="loader" viewBox="0 0 400 160">
-        <text x="50%" y="50%" text-anchor="middle" class="text-body">{{sector}}</text>
+        <text x="50%" y="50%" text-anchor="middle" class="text-body">
+            
+            {% if sector == "Lobby" %}
+                Erica
+            {% else %}
+                {{sector}}
+            {% endif %}
+        </text>
     </svg>
     <!-- <p class="tagline">Efficiency. Productivity. Convenience</p> -->
 </div>

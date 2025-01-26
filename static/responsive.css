@@ -44,5 +44,6 @@
         border: none;
         height: 100vh;
         position: fixed;
+        border-radius: 0 !important;
     }
 }
