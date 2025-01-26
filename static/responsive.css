@@ -14,16 +14,13 @@
     }
 
     nav {
-        height: 7rem;
-        display: block;
-        padding: 1rem;
-    }
-
-    .nav-container {
+        height: 6rem;
+        margin: 1rem;
         display: flex;
-        border-radius: 8px;
         align-items: center;
+        border-radius: .4rem;
         justify-content: center;
+        background-color: #ffffff;
         border: 1px solid #00000020;
     }
     

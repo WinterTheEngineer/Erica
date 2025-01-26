@@ -26,24 +26,27 @@
     <title>Erica - {{sector}}</title>
 </head>
 <body>
-    {% include 'splash.html' %}
-    {% include 'navbar.html' %}
+    <div class="container body-container">
+        {% include 'splash.html' %}
+        {% include 'navbar.html' %}
+        {% include 'actionbar.html' %}
 
-    {% block body %}
-    {% endblock body %}
+        {% block body %}
+        {% endblock body %}
 
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                {% if message.tags == 'error' %}
-                    <ion-icon name="close-circle"></ion-icon>
-                {% else %}
-                    <ion-icon name="checkmark-circle"></ion-icon>
-                {% endif %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        <ion-icon name="close-circle"></ion-icon>
+                    {% else %}
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    {% endif %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
     
     <!-- Development version -->
      <script src="{% static 'js/base.js' %}"></script>
