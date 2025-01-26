@@ -14,13 +14,15 @@
     }
 
     .body-container {
-        gap: 1rem 0;
+        gap: .5rem 0;
+        padding: .5rem;
         flex-direction: column;
     }
 
     nav {
         height: 6rem;
         display: flex;
+        position: relative;
         align-items: center;
         border-radius: .4rem;
         justify-content: center;
@@ -38,6 +40,20 @@
         object-fit: contain;
     }
 
+    #nav-toggle {
+        top: 50%;
+        left: .5rem;
+        border: none;
+        cursor: pointer;
+        background: none;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    #nav-toggle svg {
+        color: #000000;
+    }
+
     .actionbar {
         top: 0;
         left: 0;
@@ -45,7 +61,12 @@
         border: none;
         height: 100vh;
         position: fixed;
-        display: none;
+        transform: translateX(-100%);
         border-radius: 0 !important;
+        transition: transform .5s ease;
+    }
+
+    .actionbar.expanded {
+        transform: translateX(0);
     }
 }
