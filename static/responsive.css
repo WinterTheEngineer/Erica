@@ -13,9 +13,13 @@
         font-weight: 900;
     }
 
+    .body-container {
+        gap: 1rem 0;
+        flex-direction: column;
+    }
+
     nav {
         height: 6rem;
-        margin: 1rem;
         display: flex;
         align-items: center;
         border-radius: .4rem;
@@ -41,6 +45,7 @@
         border: none;
         height: 100vh;
         position: fixed;
+        display: none;
         border-radius: 0 !important;
     }
 }
