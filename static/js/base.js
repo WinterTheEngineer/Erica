@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector('.actionbar');
-    const menuToggler = document.getElementById('nav-toggle');
 
     const menuLinks = document.querySelectorAll('.menu a');
     const targetValue = document.querySelector('.menu').getAttribute('data-target-value');
-    let listCreationModal = document.getElementById("list-creation-modal");
+    const listCreationModal = document.getElementById("list-creation-modal");
 
     lucide.createIcons();
     
@@ -13,10 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.add('active');
         }
     });
-    
-    menuToggler.addEventListener('click', () => {
-        menu.classList.toggle('expanded');
-    })
 
+    document.querySelectorAll('.nav-toggle').forEach(toggler => {
+        toggler.addEventListener('click', () => {
+            menu.classList.toggle('expanded');
+        });
+    });
+
+    document.querySelectorAll('.toggle-modal').forEach(element => {
+        element.addEventListener('click', () => {
+            listCreationModal.classList.toggle('minimized');
+        });
+    });
 
 });

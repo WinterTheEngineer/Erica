@@ -32,7 +32,7 @@
             </div>
         {% endfor %}
         <div class="card new-list-card list animate__animated animate__fadeInUp">
-            <button type="reset" onclick="minimizeModal()">
+            <button class="toggle-modal">
                 <ion-icon name="add-circle-outline"></ion-icon>
             </button>
         </div>
@@ -40,7 +40,7 @@
 </section>
 <section id="list-creation-modal" class="minimized">
     <div class="header">
-        <button class="close-modal" onclick="minimizeModal()">
+        <button class="toggle-modal">
             <ion-icon name="close-circle"></ion-icon>
         </button>
         <img src="https://imgur.com/1zvy9gA.png" alt="Erica logo, depicting a pair of spectacles, and text that spells 'ERICA' in all caps.">

@@ -40,7 +40,7 @@
         object-fit: contain;
     }
 
-    #nav-toggle {
+    .nav-toggle {
         top: 50%;
         left: .5rem;
         border: none;
@@ -50,7 +50,17 @@
         transform: translateY(-50%);
     }
 
-    #nav-toggle svg {
+    .actionbar .logo {
+        position: relative;
+    }
+
+    .actionbar .logo .nav-toggle {
+        left: unset;
+        right: .5rem;
+        width: min-content;
+    }
+
+    .nav-toggle svg {
         color: #000000;
     }
 
@@ -60,6 +70,7 @@
         width: 85vw;
         border: none;
         height: 100vh;
+        padding: .5rem;
         position: fixed;
         transform: translateX(-100%);
         border-radius: 0 !important;
