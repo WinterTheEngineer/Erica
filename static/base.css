@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Figtree';
+    font-family: 'Inter', 'Figtree';
 }
 
 body {
     height: 100vh;
-    /* background: linear-gradient(to bottom, #F4B1A5, #FFDACA 20%); */
+    background: #eeeeee;
 }
 
 .container {

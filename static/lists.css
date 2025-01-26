@@ -54,22 +54,8 @@
     align-items: center;
 }
 
-.listitem > :first-child {
-    display: grid;
-    width: 1.2rem;
-    height: 1.2rem;
-    color: #ffffff;
-    border-radius: 50%;
-    place-items: center;
-    background-color: #B42EF2;
-}
-
-.listitem > :last-child {
+.listitem p {
     padding: 0 .2rem;
-}
-
-.listitem:not(:last-child) {
-    margin-bottom: 0.5rem;
 }
 
 .new-list-card {
