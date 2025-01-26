@@ -10,9 +10,53 @@
 
 .actionbar {
     flex: .15;
-    border-radius: .5rem;
+    padding: 1rem;
+    border-radius: .4rem;
     background-color: #ffffff;
     border: 1px solid #00000020;
+}
+
+.actionbar .logo {
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.actionbar .logo svg {
+    height: 100%;
+}
+
+.actionbar .searchbar {
+    display: flex;
+    border-radius: inherit;
+    border: 2px solid #00000020;
+}
+
+.actionbar .searchbar input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: .75rem;
+    color: #27272780;
+    border-radius: inherit;
+}
+
+.actionbar .searchbar button {
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.actionbar .searchbar button ion-icon {
+    opacity: .2;
+    font-size: 1.6rem;
+    transition: color .5s ease,
+                opacity .5s ease;
+}
+
+.actionbar .searchbar button:hover ion-icon {
+    opacity: .5;
+    color: #a229da;
 }
 
 .main-content {
