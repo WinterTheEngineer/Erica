@@ -1,4 +1,4 @@
-@media screen and (min-width: 240px) and (max-width: 1200px) {
+@media screen and (min-width: 240px) and (max-width: 1200px){
     #splash .logo {
         height: 6rem;
     }
@@ -84,6 +84,10 @@
         transform: translateX(0);
     }
     
+    .header {
+        padding: 0 .5rem;
+    }
+
     /* Lists */
     .content-grid {
         padding: .5rem;
@@ -92,5 +96,20 @@
     .list {
         padding: .5rem;
         height: min-content;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .body-container {
+        padding: .5rem;
+        column-gap: .5rem;
+    }
+
+    .actionbar {
+        flex: .18;
+    }
+
+    .main-content {
+        flex-direction: .82;
     }
 }

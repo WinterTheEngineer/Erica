@@ -7,12 +7,10 @@
 
 {% block body %}
 <section id="lists" class="main-content">
-    <section id="header">
-        <div class="container">
-            <h1 class="title animate__animated animate__fadeInUp">Lists</h1>
-            <p class="tagline animate__animated animate__fadeInUp">Everything... Organized.</p>
-        </div>
-    </section>
+    <div class="header">
+        <h1>{{ sector }}</h1>
+        <p>Everything. Organized. Always</p>
+    </div>
     <div class="container content-grid">
         {% for list in lists %}
             <div class="card list animate__animated animate__fadeInUp">

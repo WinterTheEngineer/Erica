@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', 'Figtree';
+    font-family: 'Inter', 'Helvetica Neue';
 }
 
 body {
@@ -140,7 +140,7 @@ body {
     height: 100%;
     display: flex;
     color: #272727;
-    font-size: .9rem;
+    font-size: .8rem;
     position: relative;
     align-items: center;
     text-decoration: none;
@@ -196,29 +196,25 @@ nav {
     border: 1px solid #00000020;
 }
 
-#header {
-    height: 12rem;
-    background-color: #000000;
-}
-
-#header .container {
+.header {
     display: flex;
-    align-items: center;
+    height: 10rem;
+    padding: 0 1rem;
     flex-direction: column;
     justify-content: center;
 }
 
-#header .title {
-    color: #ffffff;
-    font-size: 3.2rem;
-    font-family: 'Gotham';
-    text-transform: uppercase;
-    animation-delay: 6s;
+.header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-inline-start: 1rem;
+    font-family: 'Helvetica Neue';
 }
 
-#header .tagline {
-    color: #B42EF2;
-    animation-delay: 6.5s;
+.header p {
+    opacity: .25;
+    font-size: .9rem;
+    margin-inline-start: 1rem;
 }
 
 .messages {
