@@ -1,3 +1,9 @@
+#lists #header {
+    margin-bottom: 1rem;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+}
+
 .content-grid {
     padding: 1rem;
     columns: 18rem auto;

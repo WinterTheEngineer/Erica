@@ -44,9 +44,11 @@
         top: 50%;
         left: .5rem;
         border: none;
+        display: grid;
         cursor: pointer;
         background: none;
         position: absolute;
+        place-content: center;
         transform: translateY(-50%);
     }
 
@@ -67,6 +69,7 @@
     .actionbar {
         top: 0;
         left: 0;
+        z-index: 99;
         width: 85vw;
         border: none;
         height: 100vh;
@@ -79,5 +82,15 @@
 
     .actionbar.expanded {
         transform: translateX(0);
+    }
+    
+    /* Lists */
+    .content-grid {
+        padding: .5rem;
+    }
+
+    .list {
+        padding: .5rem;
+        height: min-content;
     }
 }
