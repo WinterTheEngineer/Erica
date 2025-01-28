@@ -34,10 +34,8 @@ def new_list(request):
             list_items = form.cleaned_data["listItems"].split(", ")
 
             for list_item in list_items:
-                new_list_item = ListItem(name=list_item)
-                new_list_item.save()
-                new_list.listItems.add(new_list_item)
-            
+                new_list_item = ListItem(name=list_item, list=new_list)
+                new_list_item.save()           
             
         else:
             messages.error(request, "A form validation error prevented me from created the list.")
