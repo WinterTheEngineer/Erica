@@ -27,19 +27,22 @@
 }
 
 .card-header {
-    padding: 0 .6rem;
     margin-bottom: .5rem;
-    border-left: .4rem solid #B42EF2;
 }
 
 .card-header h2 {
     margin: 0;
-    font-weight: 600;   
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0 .5rem;
+    font-family: 'Helvetica Neue';
+    border-left: .4rem solid #B42EF2;
 }
 
 .card-header p {
     opacity: .4;
     margin: .5rem 0;
+    font-size: .8rem;
 }
 
 .listitem {

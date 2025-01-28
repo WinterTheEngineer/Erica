@@ -21,7 +21,7 @@
                     {% endif %}
                 </div>
                 <div class="card-body">
-                    {% for listitem in list.listItems.all %}
+                    {% for listitem in list.listitem_set.all %}
                         <div class="listitem">
                             <p>{{listitem}}</p>
                         </div>

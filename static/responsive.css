@@ -1,4 +1,10 @@
 @media screen and (min-width: 240px) and (max-width: 1200px){
+    .body-container {
+        gap: .5rem 0;
+        padding: .5rem;
+        flex-direction: column;
+    }
+
     #splash .logo {
         height: 6rem;
     }
@@ -11,12 +17,6 @@
         font-size: 4rem;
         stroke-width: 1;
         font-weight: 900;
-    }
-
-    .body-container {
-        gap: .5rem 0;
-        padding: .5rem;
-        flex-direction: column;
     }
 
     nav {
@@ -98,8 +98,12 @@
     }
 
     .list {
-        padding: .5rem;
         height: min-content;
+    }
+
+    .list .card-header h2 {
+        display: flex;
+        align-items: center;
     }
 }
 
