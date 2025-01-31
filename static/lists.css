@@ -5,9 +5,16 @@
 
 .content-grid {
     padding: 1rem;
+    height: min-content;
     columns: 18rem auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     /* grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); */
 }
+
+.content-grid::-webkit-scrollbar {
+    display: none;
+} 
 
 .list {
     padding: 1rem;
