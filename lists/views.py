@@ -56,11 +56,10 @@ def new_list_item(request):
 
         if form.is_valid():
             list_id = request.POST.get("listID")
-            changed_list = List.objects.get(id=list_id)
             list_items = form.cleaned_data["listItems"].split(", ")
 
             for list_item in list_items:
-                new_list_item = ListItem(name=list_item, list=changed_list)
+                new_list_item = ListItem(name=list_item, list=List.objects.get(id=list_id))
                 new_list_item.save()
                 
                 messages.success(request, "The list was amended successfully.")

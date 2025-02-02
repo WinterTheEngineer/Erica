@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menu = document.querySelector('.actionbar');
 
     const menuLinks = document.querySelectorAll('.menu a');
     const targetValue = document.querySelector('.menu').getAttribute('data-target-value');
@@ -13,15 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    document.querySelectorAll('.nav-toggle').forEach(toggler => {
-        toggler.addEventListener('click', () => {
-            menu.classList.toggle('expanded');
-        });
-    });
+    document.querySelectorAll('.toggle-modify-modal').forEach(element => {
+        element.addEventListener('click', function () {
 
-    document.querySelectorAll('.toggle-modal').forEach(element => {
-        element.addEventListener('click', () => {
-            listCreationModal.classList.toggle('minimized');
+            const listId = this.getAttribute('data-list-id');
+            console.log(listId);
+            document.getElementById('list-id-field').value = listId;
         });
     });
 

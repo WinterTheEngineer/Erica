@@ -100,9 +100,10 @@
     color: #B42EF2;
 }
 
-#list-creation-modal {
+.list-creation-modal {
     top: 0;
     left: 0;
+    z-index: 99;
     width: 100%;
     height: 100%;
     display: flex;
@@ -115,22 +116,22 @@
                 visibility .5s ease;
 }
 
-#list-creation-modal.minimized {
+.list-creation-modal.minimized {
     opacity: 0;
     visibility: hidden;
 }
 
-#list-creation-modal h2 {
+.list-creation-modal h2 {
     font-size: 2rem;
     text-align: center;
 }
 
-#list-creation-modal img {
+.list-creation-modal img {
     width: 30%;
 }
 
-#list-creation-modal .header,
-#list-creation-modal form {
+.list-creation-modal .header,
+.list-creation-modal form {
     padding: 1rem;
     border-radius: 1rem;
     width: min-content;
@@ -139,7 +140,7 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-#list-creation-modal .header {
+.list-creation-modal .header {
     width: auto;
     display: flex;
     padding: 1rem 0;
@@ -150,17 +151,17 @@
     justify-content: center;
 }
 
-#list-creation-modal form div {
+.list-creation-modal form div {
     display: flex;
     flex-direction: column;
 }
 
-#list-creation-modal form div label {
+.list-creation-modal form div label {
     margin-bottom: .5rem;
 }
 
-#list-creation-modal form div input,
-#list-creation-modal form div textarea {
+.list-creation-modal form div input,
+.list-creation-modal form div textarea {
     outline: none;
     padding: .5rem;
     resize: none;
@@ -170,7 +171,7 @@
     background-color: #fafafa;
 }
 
-#list-creation-modal form button {
+.list-creation-modal form button {
     width: 8rem;
     outline: none;
     padding: .5rem;
@@ -181,22 +182,22 @@
                 background-color .5s ease;
 }
 
-#list-creation-modal form button:hover {
+.list-creation-modal form button:hover {
     color: #ffffff;
 }
 
-#list-creation-modal .submit {
+.list-creation-modal .submit {
     border: 1px solid #B42EF2;
 }
 
-#list-creation-modal .cancel {
+.list-creation-modal .cancel {
     border: 1px solid #d43232;
 }
 
-#list-creation-modal .submit:hover {
+.list-creation-modal .submit:hover {
     background-color: #B42EF2;
 }
 
-#list-creation-modal .cancel:hover {
+.list-creation-modal .cancel:hover {
     background-color: #d43232;
 }

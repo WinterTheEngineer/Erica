@@ -64,7 +64,7 @@ body {
     visibility: hidden;
 }
 
-.actionbar {
+#actionbar {
     flex: .15;
     row-gap: 1rem;
     padding: 1rem;
@@ -75,23 +75,23 @@ body {
     border: 1px solid #00000020;
 }
 
-.actionbar .logo {
+#actionbar .logo {
     height: 6rem;
     display: flex;
     justify-content: center;
 }
 
-.actionbar .logo img {
+#actionbar .logo img {
     height: 100%;
 }
 
-.actionbar .searchbar {
+#actionbar .searchbar {
     display: flex;
     border-radius: .4rem;
     border: 2px solid #00000020;
 }
 
-.actionbar .searchbar input {
+#actionbar .searchbar input {
     width: 80%;
     border: none;
     outline: none;
@@ -101,7 +101,7 @@ body {
     background-color: #ffffff;
 }
 
-.actionbar .searchbar button {
+#actionbar .searchbar button {
     width: 20%;
     border: none;
     display: grid;
@@ -110,7 +110,7 @@ body {
     place-content: center;
 }
 
-.actionbar .searchbar button svg {
+#actionbar .searchbar button svg {
     opacity: .2;
     width: 18px;
     height: 18px;
@@ -118,25 +118,25 @@ body {
                 opacity .5s ease;
 }
 
-.actionbar .searchbar button:hover svg {
+#actionbar .searchbar button:hover svg {
     opacity: .5;
     color: #a229da;
 }
 
-.actionbar .menu {
+#actionbar .menu {
     display: flex;
     row-gap: .5rem;
     list-style: none;
     flex-direction: column;
 }
 
-.actionbar .menu li {
+#actionbar .menu li {
     border-radius: .3rem;
 }
 
-.actionbar .menu li a,
-.actionbar .menu li a:visited,
-.actionbar .menu li a:active {
+#actionbar .menu li a,
+#actionbar .menu li a:visited,
+#actionbar .menu li a:active {
     height: 100%;
     display: flex;
     color: #272727;
@@ -153,17 +153,17 @@ body {
                 background-color .3s ease;
 }
 
-.actionbar .menu li a:hover {
+#actionbar .menu li a:hover {
     background-color: #F8EAFE;
     border-color: #B42EF250;
 }
 
-.actionbar .menu li a.active {
+#actionbar .menu li a.active {
     color: #B42EF2;
     border: 1px solid #B42EF2;
 }
 
-.actionbar .menu li a.active::after{
+#actionbar .menu li a.active::after{
     top: 50%;
     left: -1px;
     width: 5px;
@@ -175,7 +175,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.actionbar .menu li a svg {
+#actionbar .menu li a svg {
     width: 16px;
     height: 16px;
     margin-inline-end: .5rem;

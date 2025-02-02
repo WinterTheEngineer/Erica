@@ -52,11 +52,11 @@
         transform: translateY(-50%);
     }
 
-    .actionbar .logo {
+    #actionbar .logo {
         position: relative;
     }
 
-    .actionbar .logo .nav-toggle {
+    #actionbar .logo .nav-toggle {
         left: unset;
         right: .5rem;
         width: min-content;
@@ -66,7 +66,7 @@
         color: #000000;
     }
 
-    .actionbar {
+    #actionbar {
         top: 0;
         left: 0;
         z-index: 99;
@@ -75,13 +75,12 @@
         height: 100vh;
         padding: .5rem;
         position: fixed;
-        transform: translateX(-100%);
         border-radius: 0 !important;
         transition: transform .5s ease;
     }
 
-    .actionbar.expanded {
-        transform: translateX(0);
+    #actionbar.minimized {
+        transform: translateX(-100%);
     }
     
     .header {
@@ -113,7 +112,7 @@
         column-gap: .5rem;
     }
 
-    .actionbar {
+    #actionbar {
         flex: .18;
     }
 
