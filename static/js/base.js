@@ -21,4 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    document.querySelectorAll('.nav-toggle').forEach(element => {
+        element.addEventListener('click', function () {
+            document.getElementById('actionbar').classList.toggle('expanded');
+        });
+    });
+
 });
