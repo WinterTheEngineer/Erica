@@ -206,11 +206,17 @@ nav {
     justify-content: center;
 }
 
-.header h1 {
+.header h1,
+.header h1 span {
     font-size: 3rem;
     font-weight: 500;
     margin-inline-start: 1rem;
     font-family: 'Helvetica Neue';
+}
+
+.header h1 span {
+    margin: 0;
+    color: #B42EF2;
 }
 
 .header p {

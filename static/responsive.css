@@ -79,6 +79,7 @@
         transform: translateX(-100%);
         border-radius: 0 !important;
         transition: transform .5s ease;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 
     #actionbar.expanded {
@@ -90,7 +91,8 @@
         padding: 0 .5rem;
     }
 
-    .header h1 {
+    .header h1,
+    .header h1 span {
         font-size: 2rem;
     }
 
@@ -109,17 +111,9 @@
     }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1440px) {
-    .body-container {
-        padding: .5rem;
-        column-gap: .5rem;
-    }
-
+@media screen and (min-width: 768px) {
     #actionbar {
-        flex: .18;
+        width: 40vw;
     }
 
-    .main-content {
-        flex-direction: .82;
-    }
 }
