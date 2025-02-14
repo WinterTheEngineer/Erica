@@ -61,6 +61,15 @@
     background-color: #E2A8FE;
 }
 
+.card-footer button {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: #B42EF2;
+}
+
 .listitem {
     width: 100%;
     display: flex;
