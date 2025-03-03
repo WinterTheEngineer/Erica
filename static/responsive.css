@@ -1,4 +1,4 @@
-@media screen and (min-width: 240px) {
+@media screen and (min-width: 240px) and (orientation: portrait) {
     .body-container {
         gap: .5rem 0;
         padding: .5rem;
@@ -111,9 +111,15 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
     #actionbar {
         width: 40vw;
     }
 
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1650px) {
+    #actionbar {
+        flex: .2;
+    }    
 }
