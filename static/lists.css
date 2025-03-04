@@ -51,14 +51,14 @@
     font-size: .8rem;
 }
 
-.listitem {
-    font-weight: 600;
+.card-body {
+    /* padding: .5rem; */
+    border-radius: 4px;
 }
 
-.card-body {
-    padding: .5rem;
-    border-radius: 4px;
-    background-color: #E2A8FE;
+.card-body.ordered {
+    display: flex;
+    flex-direction: column;
 }
 
 .card-footer button {
@@ -72,16 +72,30 @@
 }
 
 .listitem {
-    width: 100%;
-    display: flex;
+    display: inline-flex;
+    margin: .3rem 0;
     font-size: 14px;
+    font-weight: 600;
     overflow: hidden;
-    border-radius: 4px;
+    width: fit-content;
+    white-space: nowrap;
+    border-radius: 1rem;
     align-items: center;
+    padding: .1rem .4rem;
+    text-overflow: ellipsis;
+    background-color: #00000007;
 }
 
-.listitem p {
-    padding: 0 .2rem;
+.listitem span {
+    display: grid;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: #ffffff;
+    font-size: inherit;
+    border-radius: 50%;
+    place-content: center;
+    background: #000000;
+    margin-inline-end: .5rem;
 }
 
 .new-list-card {
@@ -134,7 +148,7 @@
 }
 
 .list-creation-modal h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
@@ -161,6 +175,12 @@
     margin-bottom: 2rem;
     flex-direction: column;
     justify-content: center;
+}
+
+.list-creation-modal .header .toggle-list-modal {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
 }
 
 .list-creation-modal form div {
