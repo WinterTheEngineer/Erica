@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    document.querySelectorAll('.toggle-list-modal').forEach(element => {
+        element.addEventListener('click', function () {
+            listCreationModal.classList.toggle('expanded');
+        });
+    });
+
     document.querySelectorAll('.nav-toggle').forEach(element => {
         element.addEventListener('click', function () {
             document.getElementById('actionbar').classList.toggle('expanded');
