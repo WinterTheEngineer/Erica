@@ -88,10 +88,10 @@
 
 .listitem span {
     display: grid;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
     color: #ffffff;
-    font-size: inherit;
+    font-size: 12px;
     border-radius: 50%;
     place-content: center;
     background: #000000;

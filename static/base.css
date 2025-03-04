@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', 'Helvetica Neue';
+    font-family: 'Inter', 'Gotham';
 }
 
 body {
@@ -210,8 +210,9 @@ nav {
 .header h1 span {
     font-size: 3rem;
     font-weight: 500;
+    font-family: 'Gotham';
+    text-transform: uppercase;
     margin-inline-start: 1rem;
-    font-family: 'Helvetica Neue';
 }
 
 .header h1 span {
