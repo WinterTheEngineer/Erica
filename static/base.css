@@ -200,15 +200,14 @@ nav {
 
 .header {
     display: flex;
-    height: 10rem;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     flex-direction: column;
     justify-content: center;
 }
 
 .header h1,
 .header h1 span {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     font-family: 'Gotham';
     text-transform: uppercase;
