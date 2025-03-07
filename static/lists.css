@@ -16,11 +16,10 @@
     display: none;
 } 
 
-.list {
+.card {
     padding: 1rem;
     position: relative;
     border-radius: 6px;
-    height: min-content;
     break-inside: avoid;
     margin-bottom: 1rem;
     animation-delay: 6.5s;
@@ -29,54 +28,45 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.list:hover {
-    box-shadow: #E2A8FE 0px 5px 15px;
-}
-
 .card-header {
+    display: flex;
     margin-bottom: .5rem;
+    justify-content: space-between;
 }
 
 .card-header h2 {
     margin: 0;
-    width: 90%;
-    font-size: 1.4rem;
     font-weight: 500;
     padding: 0 .5rem;
+    font-size: 1.4rem;
     font-family: 'Helvetica Neue';
     border-left: .4rem solid #B42EF2;
 }
 
-.card-header p {
-    opacity: .4;
-    margin: .5rem 0;
-    font-size: .8rem;
-}
-
-.toggle-card-menu {
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    top: 1.25rem;
+.toggle-dropdown {
     border: none;
     outline: none;
     cursor: pointer;
     background: none;
-    position: absolute;
+    margin-top: .1rem;
     border-radius: .2rem;
+    align-self:flex-start;
     transition: background-color .3s ease;
 }
 
-.toggle-card-menu:hover {
-    background-color: #E2A8FE;
+.card .description {
+    opacity: .4;
+    display: block;
+    margin: .75rem 0;
+    font-size: .8rem;
 }
 
-.card-body {
+.card .body {
     /* padding: .5rem; */
     border-radius: 4px;
 }
 
-.card-body.ordered {
+.card .body.ordered {
     display: flex;
     flex-direction: column;
 }
@@ -140,7 +130,7 @@
 
 .card-menu {
     right: 0;
-    top: 4rem;
+    top: 1rem;
     opacity: 0;
     z-index: 99;
     width: 12rem;
@@ -153,6 +143,16 @@
     transition: opacity .5s ease 0s,
                 visibility .5s ease .5s;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.menu-header {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.card-menu ul {
+    list-style: none;
 }
 
 .card-menu.expanded {

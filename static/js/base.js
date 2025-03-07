@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.querySelectorAll('.toggle-card-menu').forEach(element => {
+    document.querySelectorAll('.toggle-dropdown').forEach(element => {
         element.addEventListener('click', function () {
             const listMenuId = this.getAttribute('data-list-id');
             document.getElementById(`menu-${listMenuId}`).classList.toggle('expanded');
@@ -36,17 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    // Close menu when clicking outside
-    document.addEventListener('click', function (event) {
-        document.querySelectorAll('.card-menu.expanded').forEach(menu => {
-            const toggleButton = document.querySelector(`.toggle-card-menu[data-list-id="${menu.id.replace('menu-', '')}"]`);
+    // // Close menu when clicking outside
+    // document.addEventListener('click', function (event) {
+    //     document.querySelectorAll('.card-menu.expanded').forEach(menu => {
+    //         const toggleButton = document.querySelector(`.toggle-card-menu[data-list-id="${menu.id.replace('menu-', '')}"]`);
             
-            // Check if the click was outside both the menu and its toggle button
-            if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
-                menu.classList.toggle('expanded');
-            }
-        });
-    });
+    //         // Check if the click was outside both the menu and its toggle button
+    //         if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+    //             menu.classList.toggle('expanded');
+    //         }
+    //     });
+    // });
 
     document.querySelectorAll('.nav-toggle').forEach(element => {
         element.addEventListener('click', function () {
