@@ -18,6 +18,7 @@
 
 .list {
     padding: 1rem;
+    position: relative;
     border-radius: 6px;
     height: min-content;
     break-inside: avoid;
@@ -38,6 +39,7 @@
 
 .card-header h2 {
     margin: 0;
+    width: 90%;
     font-size: 1.4rem;
     font-weight: 500;
     padding: 0 .5rem;
@@ -51,6 +53,24 @@
     font-size: .8rem;
 }
 
+.toggle-card-menu {
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    top: 1.25rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    border-radius: .2rem;
+    transition: background-color .3s ease;
+}
+
+.toggle-card-menu:hover {
+    background-color: #E2A8FE;
+}
+
 .card-body {
     /* padding: .5rem; */
     border-radius: 4px;
@@ -61,14 +81,93 @@
     flex-direction: column;
 }
 
-.card-footer button {
+.card-action {
+    width: 2rem;
+    height: 2rem;
     border: none;
     outline: none;
+    cursor: pointer;
+    overflow: hidden;
     color: #ffffff;
-    padding: .5rem 1rem;
-    border-radius: 5px;
     margin-top: 1rem;
-    background-color: #B42EF2;
+    position: relative;
+    border-radius: 50%;
+    padding: .5rem 1rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #000000;
+    transition: width .3s ease,
+                border-radius .3s ease,
+                background-color .5s ease;
+}
+
+.card-action.delete .icon,
+.card-action.delete .text {
+    transition: transform .4s ease, 
+                opacity .3s ease, 
+                visibility .3s ease;
+}
+
+.card-action.delete .icon {
+    display: grid;
+    font-size: 1rem;
+    place-content: center;
+}
+
+.card-action.delete .text {
+    opacity: 0;
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(100%);
+}
+
+.card-action:hover {
+    width: 5rem;
+    border-radius: 2rem;
+    background-color: #d43232;
+}
+
+.card-action:hover .icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-action:hover .text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-menu {
+    right: 0;
+    top: 4rem;
+    opacity: 0;
+    z-index: 99;
+    width: 12rem;
+    padding: 1rem;
+    visibility: hidden;
+    position: absolute;
+    height: max-content;
+    border-radius: inherit;
+    background-color: #ffffff;
+    transition: opacity .5s ease 0s,
+                visibility .5s ease .5s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.card-menu.expanded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease;
+}
+
+.card-menu h4 {
+    padding-bottom: .5rem;    
+    border-bottom: 1px solid #00000020;
+}
+
+.card-menu:hover .list {
+    pointer-events: none;
 }
 
 .listitem {

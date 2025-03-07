@@ -123,20 +123,20 @@ body {
     color: #a229da;
 }
 
-#actionbar .menu {
+.menu {
     display: flex;
     row-gap: .5rem;
     list-style: none;
     flex-direction: column;
 }
 
-#actionbar .menu li {
+.menu li {
     border-radius: .3rem;
 }
 
-#actionbar .menu li a,
-#actionbar .menu li a:visited,
-#actionbar .menu li a:active {
+.menu li a,
+.menu li a:visited,
+.menu li a:active {
     height: 100%;
     display: flex;
     color: #272727;
@@ -153,17 +153,17 @@ body {
                 background-color .3s ease;
 }
 
-#actionbar .menu li a:hover {
+.menu li a:hover {
     background-color: #F8EAFE;
     border-color: #B42EF250;
 }
 
-#actionbar .menu li a.active {
+.menu li a.active {
     color: #B42EF2;
     border: 1px solid #B42EF2;
 }
 
-#actionbar .menu li a.active::after{
+.menu li a.active::after{
     top: 50%;
     left: -1px;
     width: 5px;
@@ -175,7 +175,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#actionbar .menu li a svg {
+.menu li a svg {
     width: 16px;
     height: 16px;
     margin-inline-end: .5rem;
