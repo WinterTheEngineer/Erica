@@ -13,7 +13,7 @@
     </div>
     <div class="container content-grid">
         {% for list in lists %}
-            <div class="card list animate__animated animate__fadeInUp">
+            <div id="list-{{list.id}}" class="card animate__animated animate__fadeInUp">
                 <div class="card-header">
                     <h2>{{list.title}}</h2>
                     <button class="toggle-dropdown" data-list-id="{{list.id}}">
@@ -29,6 +29,34 @@
                             {% if listitem.order%}<span>{{listitem.order}}</span>{% endif %}{{listitem}}
                         </p>
                     {% endfor %}
+                </div>
+                <div class="menu" id="menu-{{list.id}}">
+                    <div class="card-header menu-header">
+                        <h4>Options</h4>
+                        <button class="toggle-dropdown" data-list-id="{{list.id}}">
+                            <i data-lucide="x"></i>
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="{% url 'lobby' %}">
+                                <i data-lucide="list-end"></i>
+                                Modify List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'lists' %}">
+                                <i data-lucide="square-stack"></i>
+                                Duplicate List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i data-lucide="trash"></i>
+                                Delete List
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         {% endfor %}

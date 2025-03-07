@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.addEventListener('click', function () {
             const listMenuId = this.getAttribute('data-list-id');
             document.getElementById(`menu-${listMenuId}`).classList.toggle('expanded');
-
-            event.stopPropagation();
+            document.getElementById(`list-${listMenuId}`).classList.toggle('menu-toggled');
         });
     });
     
