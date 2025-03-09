@@ -1,7 +1,10 @@
+import urllib.parse
+from django.db.models import Q
 from .models import List, ListItem
 from django.contrib import messages
 from .forms import ListForm, ListItemForm
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
 
 # Create your views here.
 def lists(request):
@@ -17,6 +20,41 @@ def lists(request):
 
     return render(request, 'lists.html', context)
 
+
+def search(request):
+
+    search_query = request.GET.get("search_query", "")
+    search_query = urllib.parse.unquote(search_query)
+
+    lists = []
+
+    if search_query:
+        parts = search_query.split()
+        q = (
+            Q(title__startswith=parts[0])
+            | Q(description__icontains=parts[0])
+        )
+
+        for part in parts[1:]:
+            q |= (
+                Q(title__startswith=part)
+                | Q(description__icontains=part)
+            )
+
+        lists = List.objects.filter(q)
+    
+    paginator = Paginator(lists, 2)
+    page_num = int(request.GET.get("page", 1))
+    page = paginator.page(page_num)
+
+    context = {
+        "search_query": search_query,
+        "lists": page.object_list,
+        "has_more": page.has_next(),
+        "next_page": page_num + 1,
+    }
+
+    return render(request, "search.html", context)
 
 def new_list(request):
 

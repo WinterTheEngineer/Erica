@@ -14,7 +14,7 @@
         </button>
     </div>
     <div class="searchbar">
-        <input type="search" name="search" class="searchbar-input" placeholder="Search across {% if sector == 'Lobby' %}apps{% else %}{{sector}}{% endif %}...">
+        <input type="search" name="search_query" class="searchbar-input" value="{{search_query}}" placeholder="Search across {% if sector == 'Lobby' %}apps{% else %}{{sector}}{% endif %}...">
         <button type="submit">
             <i data-lucide="circle-arrow-right"></i>
         </button>    
