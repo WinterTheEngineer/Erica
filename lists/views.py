@@ -1,3 +1,4 @@
+import time
 import urllib.parse
 from django.db.models import Q
 from .models import List, ListItem
@@ -48,6 +49,7 @@ def search(request):
     page = paginator.page(page_num)
 
     context = {
+        "page_title": "Search results for",
         "page_num": page_num,
         "search_query": search_query,
         "lists": page.object_list,
@@ -56,6 +58,9 @@ def search(request):
         "previous_page": page_num - 1 if page_num > 1 else page_num
     }
 
+    if request.htmx:
+        return render(request, "partials/search_results.html", context)
+        
     return render(request, "search.html", context)
 
 def new_list(request):
