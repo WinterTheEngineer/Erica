@@ -67,6 +67,11 @@
             </div>
         </div>
         <div class="controls">
+            {% if page_num > 1 %}
+                <a href="{% url 'search' %}?page={{previous_page}}&search_query={{search_query}}">
+                    Previous
+                </a>
+            {% endif %}
             <a href="{% url 'search' %}?page={{next_page}}&search_query={{search_query}}">
                 Next
             </a>
