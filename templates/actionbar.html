@@ -38,7 +38,11 @@
             </a>
         </li>
         <li>
-            <a href="{% url 'lists' %}">
+            <a
+                hx-get="lists"
+                hx-target=".main-content"
+                hx-push-url="true"
+            >
                 <i data-lucide="clipboard-list"></i>
                 Lists
             </a>
