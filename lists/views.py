@@ -49,12 +49,13 @@ def search(request):
     page = paginator.page(page_num)
 
     context = {
-        "page_title": "Search results for",
+        'sector': 'Search',
         "page_num": page_num,
-        "search_query": search_query,
         "lists": page.object_list,
-        "has_more": page.has_next(),
         "next_page": page_num + 1,
+        "has_more": page.has_next(),
+        "search_query": search_query,
+        "page_title": "Search results for",
         "previous_page": page_num - 1 if page_num > 1 else page_num
     }
 
@@ -62,6 +63,7 @@ def search(request):
         return render(request, "partials/search_results.html", context)
         
     return render(request, "search.html", context)
+
 
 def new_list(request):
 

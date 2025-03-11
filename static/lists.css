@@ -3,42 +3,6 @@
     border-top-right-radius: .4rem;
 }
 
-.content-grid {
-    padding: 0 1rem;
-    height: min-content;
-    columns: 18rem auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    /* grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); */
-}
-
-.content-grid::-webkit-scrollbar {
-    display: none;
-} 
-
-.card {
-    padding: 1rem;
-    position: relative;
-    border-radius: 6px;
-    break-inside: avoid;
-    margin-bottom: 1rem;
-    animation-delay: 6.5s;
-    background-color: #ffffff;
-    transition: .3s box-shadow ease,
-                .3s height ease;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-.card.menu-toggled {
-    min-height: 14rem;
-}
-
-.card-header {
-    display: flex;
-    margin-bottom: .5rem;
-    justify-content: space-between;
-}
-
 .card-header h2 {
     margin: 0;
     font-weight: 500;
@@ -48,89 +12,11 @@
     border-left: .4rem solid #B42EF2;
 }
 
-.toggle-dropdown {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: none;
-    margin-top: .1rem;
-    border-radius: .2rem;
-    align-self:flex-start;
-    transition: color .3s ease;
-}
-
-.toggle-dropdown:hover {
-    color: #B42EF2;
-}
-
 .card .description {
     opacity: .4;
     display: block;
     margin: .75rem 0;
     font-size: .8rem;
-}
-
-.card .body {
-    /* padding: .5rem; */
-    border-radius: 4px;
-}
-
-.card .body.ordered {
-    display: flex;
-    flex-direction: column;
-}
-
-.card .menu {
-    top: 0;
-    right: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    visibility: hidden;
-    position: absolute;
-    border-radius: inherit;
-    background-color: #ffffff;
-    transition: opacity .5s ease,
-                visibility 0s ease .5s;
-}
-
-.card .menu.expanded {
-    opacity: 1;
-    padding: 1rem;
-    visibility: visible;
-    transition: opacity .3s ease,
-                visibility 0s ease;
-}
-
-.menu-header {
-    margin: 0;
-    display: flex;
-    visibility: hidden;
-    padding: 0 0 1rem 0;
-    height: fit-content;
-    justify-content: space-between;
-    border-bottom: 1px solid #00000020;
-}
-
-.menu.expanded .menu-header {
-    visibility: visible;
-}
-
-.menu.expanded .card {
-    min-height: 30rem;
-}
-
-.menu-header h4 {
-    display: grid;
-    place-content: center;
-}
-
-.menu ul {
-    display: flex;
-    row-gap: .5rem;
-    list-style: none;
-    flex-direction: column;
 }
 
 .listitem {

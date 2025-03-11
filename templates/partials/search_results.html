@@ -1,5 +1,9 @@
 {% load static %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'lists.css' %}">
+{% endblock styles %}
+
 <div class="header">
     <h1>{{page_title}} "{{search_query}}"...</h1>
     <p>Everything. Organized. Always</p>
@@ -53,19 +57,12 @@
             </div>
         </div>
     {% endfor %}
-    <div class="card new-list-card list animate__animated animate__fadeInUp">
-        <button class="toggle-list-modal">
-            <ion-icon name="add-circle-outline"></ion-icon>
-        </button>
-    </div>
 </div>
-<div class="controls">
-    {% if page_num > 1 %}
-        <a href="{% url 'search' %}?page={{previous_page}}&search_query={{search_query}}">
-            Previous
-        </a>
-    {% endif %}
-    <a href="{% url 'search' %}?page={{next_page}}&search_query={{search_query}}">
-        Next
+<div class="page-controls">
+    <a href="{% url 'search' %}?page={{previous_page}}&search_query={{search_query}}" class="{% if not page_num > 1 %}disabled{% endif %}">
+        <i data-lucide="chevron-left"></i>
+    </a>
+    <a href="{% url 'search' %}?page={{next_page}}&search_query={{search_query}}" class="{% if not has_more %}disabled{% endif %}">
+        <i data-lucide="chevron-right"></i>
     </a>
 </div>

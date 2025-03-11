@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block styles %}
-    <link rel="stylesheet" href="{% static 'lists.css' %}">
-{% endblock styles %}
-
 {% block body %}
     <section id="lists" class="main-content">
         {% include 'partials/search_results.html' %}

@@ -20,10 +20,23 @@
 <script>
     //Script for timed splash
     const page_title = "{{ sector }}";
+    let dry_sectors = ['search'];
 
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(function() {
-            splash.classList.toggle('invisible');
-        }, 6000);
-    });
+    if (dry_sectors.includes(page_title.toLowerCase())) {
+        splash.style.display = "none";
+
+        const cards = Array.from(document.getElementsByClassName('card'));
+        cards.forEach(card => {
+            card.style.animationDelay = '0s';
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(function() {
+                splash.classList.toggle('invisible');
+            }, 6000);
+        });
+    };
+
+
 </script>
