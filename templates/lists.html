@@ -5,7 +5,6 @@
 {% endblock styles %}
 
 {% block body %}
-<section id="lists" class="main-content">
     <div class="header">
         <h1>Your {{ sector }}</h1>
         <p>Everything. Organized. Always</p>
@@ -65,8 +64,8 @@
             </button>
         </div>
     </div>
-</section>
-<section id="list-creation-modal" class="list-creation-modal minimized">
+{% endblock body %}
+<!-- <section id="list-creation-modal" class="list-creation-modal minimized">
     <div class="header">
         <button class="toggle-list-modal">
             <ion-icon name="close-circle"></ion-icon>
@@ -114,6 +113,4 @@
         {{listitemform}}
         <button type="submit">Amend List</button>
     </form>
-</section>
-
-{% endblock body %}
+</section> -->

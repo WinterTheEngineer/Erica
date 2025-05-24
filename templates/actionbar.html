@@ -32,7 +32,11 @@
     </div>
     <ul class="menu" data-target-value="{{ sector }}">
         <li>
-            <a href="{% url 'lobby' %}">
+            <a
+                hx-get="lobby"
+                hx-target=".main-content"
+                hx-push-url="true"
+            >
                 <i data-lucide="House"></i>
                 Lobby
             </a>

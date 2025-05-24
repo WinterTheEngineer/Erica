@@ -7,4 +7,4 @@ def lobby(request):
         'sector': "Lobby"
     }
 
-    return render(request, 'lobby.html', context)
+    return render(request, 'base.html', context)
