@@ -7,4 +7,7 @@ def lobby(request):
         'sector': "Lobby"
     }
 
+    if request.htmx:
+        return render(request, "partials/lobby_partial.html", context)
+
     return render(request, 'base.html', context)

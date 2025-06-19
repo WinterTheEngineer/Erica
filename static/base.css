@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    background: #eeeeee;
+    background: #f8f8f8;
 }
 
 .container {
@@ -75,20 +75,52 @@ body {
     border: 1px solid #00000020;
 }
 
-#actionbar .logo {
-    height: 6rem;
+#actionbar > .header,
+.main-content > .the-bar {
+    height: 3rem;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content > .the-bar {
+    height: auto;
+    font-size: .8rem;
+    color: #27272730;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #27272730;
+}
+
+#actionbar .logo {
+    height: 100%;
+    display: flex;
 }
 
 #actionbar .logo img {
-    height: 100%;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
 }
 
 #actionbar .searchbar {
     display: flex;
     border-radius: .4rem;
-    border: 2px solid #00000020;
+    border: 1px solid #00000020;
+    background-color: #f8f8f8;
+}
+
+#actionbar > .divider {
+    width: 50%;
+    opacity: .1;
+    height: 1px;
+    border: none;
+    margin-top: 1rem;
+    background-color: #272727;
+}
+
+#actionbar .searchbar input::placeholder {
+    color: #27272780;
 }
 
 #actionbar .searchbar input {
@@ -96,9 +128,10 @@ body {
     border: none;
     outline: none;
     padding: .75rem;
-    color: #27272780;
+    background: none;
+    font-weight: 600;
+    color: #272727;
     border-radius: inherit;
-    background-color: #ffffff;
 }
 
 #actionbar .searchbar button {
@@ -130,7 +163,16 @@ body {
     flex-direction: column;
 }
 
+.menu-title {
+    opacity: .4;
+    color: #272727;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: .25rem;
+}
+
 .menu li {
+    cursor: pointer;
     border-radius: .3rem;
 }
 
@@ -139,6 +181,7 @@ body {
 .menu li a:active {
     height: 100%;
     display: flex;
+    font-weight: 600;
     color: #272727;
     font-size: .8rem;
     position: relative;
@@ -159,8 +202,8 @@ body {
 }
 
 .menu li a.active {
-    color: #B42EF2;
-    border: 1px solid #B42EF2;
+    color: #000000;
+    border: 1px solid #00000020;
 }
 
 .menu li a.active::after{
@@ -191,27 +234,26 @@ nav {
 
 .main-content {
     flex: 1;
-    /* height: 100%; */
+    padding: 1rem;
     overflow-y: scroll;
     border-radius: .5rem;
     background-color: #ffffff;
     border: 1px solid #00000020;
 }
 
-.header {
+.main-content > .header {
     display: flex;
-    padding: 2rem 1rem;
+    margin: 1.5rem 0;
     flex-direction: column;
     justify-content: center;
 }
 
-.header h1,
-.header h1 span {
+.main-content > .header h1,
+.main-content > .header h1 span {
     font-size: 2rem;
-    font-weight: 500;
-    font-family: 'Gotham';
-    text-transform: uppercase;
-    margin-inline-start: 1rem;
+    font-weight: 600;
+    font-family: 'Figtree';
+    /* text-transform: uppercase; */
 }
 
 .header h1 span {
@@ -219,10 +261,9 @@ nav {
     color: #B42EF2;
 }
 
-.header p {
+.main-content > .header p {
     opacity: .25;
     font-size: .9rem;
-    margin-inline-start: 1rem;
 }
 
 .content-grid {
@@ -244,7 +285,7 @@ nav {
     border-radius: 6px;
     break-inside: avoid;
     margin-bottom: 1rem;
-    animation-delay: 6.5s;
+    /* animation-delay: 6.5s; */
     background-color: #ffffff;
     transition: .3s box-shadow ease,
                 .3s height ease;

@@ -10,6 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (item.textContent.trim() === targetValue) {
             item.classList.add('active');
         }
+
+        item.addEventListener('click', function (event) {
+            if (item.classList.contains('active')) {
+                console.log("This is the active link.");
+            } else {
+                document.querySelector('.menu li a.active').classList.remove('active')
+                item.classList.add('active')
+            }
+        });
     });
 
     document.querySelectorAll('.toggle-modify-modal').forEach(element => {
