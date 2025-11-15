@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <link rel="stylesheet" href="{% static 'main/responsive.css' %}">
+
+    <link rel="icon" type="image/png" href="{% static 'images/logos/favicon.png' %}">
+    <title>{{page_title}}</title>
+</head>
+<body>
+    <div id="overlay">
+        <div class="content">
+            <svg class="site-icon" viewBox="0 0 500 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="136" cy="125" r="67.5" stroke="black" stroke-width="15"/>
+                <circle cx="365" cy="125" r="67.5" stroke="black" stroke-width="15"/>
+                <line x1="210" y1="125" x2="291" y2="125" stroke="black" stroke-width="14"/>
+                <path d="M164.625 152.625L136.5 124.5M136.5 124.5L108.375 96.375M136.5 124.5L164.625 96.375M136.5 124.5L108.375 152.625" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M327.5 124.5C327.5 145.211 344.289 162 365 162C385.711 162 402.5 145.211 402.5 124.5C402.5 103.789 385.711 87 365 87C344.289 87 327.5 103.789 327.5 124.5Z" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M358.75 118.25L381.667 107.833L371.25 130.75L348.333 141.167L358.75 118.25Z" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h1 class="site-header">Sorry!</h1>
+            <p>
+                Our service is not yet available in your region.<br><br>
+                We're working on bringing our peace of mind to more regions, so <b>Stay Tuned!</b>
+            </p>
+        </div>
+    </div>
+    <nav>
+        <a class="nav-logo" href="">
+            <img src="{% static 'images/logos/text_black.png' %}" alt="EricaOS logo">
+        </a>
+        <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+    </nav>
+    <header>
+        <div class="content">
+            <h1 class="site-header">
+                Take <span>Disorder</span><br>
+                Out of the Equation
+            </h1>
+            <p class="site-p">
+                Visually and structurally designed to
+                minimize distraction and maximize productivity
+                for the ADHD mind
+            </p>
+            <a href="" class="site-btn">
+                Get Started
+            </a>
+        </div>
+        <div class="graphic">
+            <img class="mobile" src="{% static 'images/header_iphone.png' %}" alt="model of an iPhone 15">
+            <img class="desktop" src="{% static 'images/header_laptop.png' %}" alt="model of a Zenbook laptop">
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var myModal = new bootstrap.Modal(document.getElementById('region-prohibition'));
+            myModal.show();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

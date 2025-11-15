@@ -1,0 +1,59 @@
+<div class="header">
+    <h1>Your {{ sector }}</h1>
+    <p>Everything. Organized. Always</p>
+</div>
+<div class="container content-grid">
+    {% for list in lists %}
+        <div id="list-{{list.id}}" class="card animate__animated animate__fadeInUp">
+            <div class="card-header">
+                <h2>{{list.title}}</h2>
+                <button class="toggle-dropdown" data-list-id="{{list.id}}">
+                    <i data-lucide="ellipsis-vertical"></i>
+                </button>
+            </div>
+            {% if list.description %}
+                <p class="description">{{list.description}}</p>
+            {% endif %}
+            <div class="body {% if list.ordered %}ordered{% endif %}">
+                {% for listitem in list.listitem_set.all %}
+                    <p class="listitem">
+                        {% if listitem.order%}<span>{{listitem.order}}</span>{% endif %}{{listitem}}
+                    </p>
+                {% endfor %}
+            </div>
+            <div class="menu" id="menu-{{list.id}}">
+                <div class="card-header menu-header">
+                    <h4>Options</h4>
+                    <button class="toggle-dropdown" data-list-id="{{list.id}}">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="{% url 'lobby' %}">
+                            <i data-lucide="list-end"></i>
+                            Modify List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lists' %}">
+                            <i data-lucide="square-stack"></i>
+                            Duplicate List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i data-lucide="trash"></i>
+                            Delete List
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="card new-list-card list animate__animated animate__fadeInUp">
+        <button class="toggle-list-modal">
+            <ion-icon name="add-circle-outline"></ion-icon>
+        </button>
+    </div>
+</div>

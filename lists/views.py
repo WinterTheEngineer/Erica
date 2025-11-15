@@ -19,6 +19,9 @@ def lists(request):
         'listitemform': ListItemForm
     }
 
+    if request.htmx:
+        return render(request, "partials/lists_partial.html", context)
+
     return render(request, 'lists.html', context)
 
 

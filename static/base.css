@@ -93,12 +93,13 @@ body {
 }
 
 #actionbar .logo {
+    width: 50%;
     height: 100%;
     display: flex;
 }
 
 #actionbar .logo img {
-    width: 50%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -243,7 +244,6 @@ nav {
 
 .main-content > .header {
     display: flex;
-    margin: 1.5rem 0;
     flex-direction: column;
     justify-content: center;
 }

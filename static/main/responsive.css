@@ -1,0 +1,103 @@
+@media screen and (min-width: 720px) {
+    #overlay .content {
+        width: 50%;
+    }
+    
+    header .content {
+        padding: 5rem 0;
+    }
+
+    nav {
+        height: 7rem;
+    }
+
+    .nav-logo img {
+        max-height: 6rem;
+    }
+    
+    nav .menu-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    
+    header .site-header {
+        font-size: 3rem;
+    }
+    
+    header .site-p {
+        width: 60%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    
+    header {
+        height: 100vh;
+        position: relative;
+    }
+
+    header .content {
+        padding: 2rem 0;
+    }
+
+    header .site-header {
+        font-size: 2rem;
+    }
+    
+    header .site-p {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    header .graphic img.mobile {
+        display: none;
+    }
+
+    header .graphic img.desktop {
+        left: 50%;
+        width: 80%;
+        bottom: 5rem;
+        display: block;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 1240px) and (orientation: landscape) {
+    
+    header {
+        height: 100vh;
+        position: relative;
+    }
+
+    header .content {
+        padding: 2rem 0;
+    }
+
+    header .site-header {
+        font-size: 2rem;
+    }
+    
+    header .site-p {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    header .graphic img.mobile {
+        display: none;
+    }
+
+    header .graphic img.desktop {
+        width: 60%;
+        bottom: 5rem;
+    }
+
+    #overlay .content {
+        width: 30%;
+    }
+
+    #overlay .content .site-header {
+        font-size: 2rem;
+    }
+}

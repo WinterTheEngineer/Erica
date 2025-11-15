@@ -31,7 +31,7 @@
     }
     
     .nav-logo {
-        width: 5rem;
+        width: 50%;
         height: 100%;
     }
     
@@ -42,25 +42,27 @@
     }
 
     .nav-toggle {
-        top: 50%;
-        left: .5rem;
         border: none;
         display: grid;
         cursor: pointer;
         background: none;
-        position: absolute;
         place-items: center;
+    }
+
+    nav > .nav-toggle {
+        top: 50%;
+        left: .5rem;
+        position: absolute;
         transform: translateY(-50%);
     }
 
-    #actionbar .logo {
+    #actionbar .header {
         position: relative;
     }
 
-    #actionbar .logo .nav-toggle {
-        left: unset;
-        right: .5rem;
-        width: min-content;
+    #actionbar .nav-toggle {
+        display: grid;
+        place-items: center;
     }
 
     .nav-toggle svg {
@@ -85,20 +87,24 @@
     #actionbar.expanded {
         transform: translateX(0);
     }
+
+    .main-content > .the-bar {
+        display: none;
+        visibility: hidden;
+    }
     
-    .header {
-        height: 8rem;
-        padding: 0 .5rem;
+    .main-content > .header {
+        margin: 0;
     }
 
-    .header h1,
-    .header h1 span {
-        font-size: 2rem;
+    .main-content > .header h1,
+    .main-content > .header h1 span {
+        font-size: 1.6rem;
     }
 
     /* Lists */
     .content-grid {
-        padding: .5rem;
+        padding: 0;
     }
 
     .list {
