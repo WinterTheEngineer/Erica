@@ -66,6 +66,36 @@
 
 @media screen and (min-width: 1240px) and (orientation: landscape) {
     
+    nav ul {
+        left: 50%;
+        gap: 2rem;
+        display: flex;
+        list-style: none;
+        position: absolute;
+        align-items: center;
+        transform: translateX(-50%);
+    }
+
+    nav ul li a {
+        font-size: .9rem !important;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .responsive-menu-icon {
+        display: none;
+    }
+
+    .nav-actions {
+        display: flex;
+    }
+
+    .nav-actions .site-btn {
+        color: #ffffff;
+        margin-right: .5rem;
+        background: linear-gradient(to bottom, #000000, #1f1f1f);
+    }
+
     header {
         height: 100vh;
         position: relative;

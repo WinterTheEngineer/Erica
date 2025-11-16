@@ -27,7 +27,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG').lower() == "true"
 
 ALLOWED_HOSTS = ['.vercel.app',
-                 'ericaos.vercel.app']
+                 'ericaos.vercel.app',
+                 '127.0.0.1',
+                 '.ngrok-free.app' if DEBUG == True else None
+                 ]
 
 
 # Application definition
@@ -134,9 +137,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static' # PRODUCTION
+
+if DEBUG:
+    STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # PRODUCTION VARIABLE
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
